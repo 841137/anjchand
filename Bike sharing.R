@@ -31,6 +31,10 @@ summary(data)
 
 # Find the missing values
 table(is.na(data))
+sapply(data, function(df)
+  {
+    sum(is.na(df)==T)
+  })
 
 # Find the distribution of the numerical variables.
 par(mfrow=c(4,2))
