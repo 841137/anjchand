@@ -50,8 +50,8 @@ hist(data$humidity)
 hist(data$windspeed)
 
 # Inferences :
-# 1. Season has 4 categories and are amlose equally distributed.
-# 2. Holidat and working day variables share similar inference. 
+# 1. Season has 4 categories and are amlost equally distributed.
+# 2. Holiday and working day variables share similar inference. 
 # 3. Weather 1 has higher contribution, ie, clear sky
 # 4. Variables temp,atemp,humidity and windspeed look naturally distributed.
 
@@ -80,7 +80,7 @@ boxplot(train$count ~ train$hour,xlab='hour',ylab='# of users')
 
 # Testing hypothesis 2 - Daily trend
 boxplot(train$registered ~ train$hour,xlab='hour',ylab='registered users')
-boxplot(train$registered ~ train$hour,xlab='hour',ylab='casual users')
+boxplot(train$casual ~ train$hour,xlab='hour',ylab='casual users')
 
 #from the boxplot, its clear that registered users have similar pattern as of count.
 # Whereas casual users have different trend. Thus we can prove that
