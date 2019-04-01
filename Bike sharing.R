@@ -264,6 +264,11 @@ pred1=predict(fit1,test)
 test$logreg=pred1
 
 #Predicting the log of casual users
+set.seed(200)
+fit2 <- randomForest(logcas ~ hour + day_type + day + humidity + atemp + temp_cas +windspeed + season + weather + holiday +
+                     workingday + dp_cas + weekend + year + year_part, data = train, importance = TRUE, ntree = 250)
+pred2 = predict(fit2,test)
+test$logcas = pred2
 
 
 
